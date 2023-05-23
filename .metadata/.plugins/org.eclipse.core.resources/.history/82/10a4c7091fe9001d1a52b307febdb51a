@@ -1,0 +1,57 @@
+package Secretaria;
+
+import java.util.Date;
+
+public class professor {
+	private String nome;
+	private Date dataNascimento;
+	private int matricula;
+	private int cpf;
+	private String endereco;
+	private int telefone;
+	private String email;
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	public int getMatricula() {
+		return matricula;
+	}
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
+	}
+	public int getCpf() {
+		return cpf;
+	}
+	public void setCpf(int cpf) {
+		this.cpf = cpf;
+	}
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	public int getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(int telefone) {
+		this.telefone = telefone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+}

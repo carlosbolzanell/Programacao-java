@@ -1,0 +1,14 @@
+package Secretaria;
+
+public class avaliacao {
+	private String notas;
+
+	public String getNotas() {
+		return notas;
+	}
+
+	public void setNotas(String notas) {
+		this.notas = notas;
+	}
+
+}

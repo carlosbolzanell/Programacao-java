@@ -1,0 +1,137 @@
+package Secretaria;
+
+/** Classe para a representacao de um aluno no sistema escolar
+ * 
+ * @author Carlos Eduardo Bolzanell
+ *
+ */
+
+public class Aluno {
+	
+	/** Variavél para armazenar o nome do aluno */
+	private String nome;
+	
+	/** Variavél para armazenar a data de nascimento do aluno */
+	private String dataNascimento;
+	
+	/** Variavel para armazenar a matricula do aluno */
+	private String matricula;
+	
+	/** Variavel para armazenar o CPF do aluno */
+	private String cpf;
+	
+	/** Variavel para armazenar o endereço do aluno */
+	private String endereco;
+	
+	/** Variavel para armazenar o telefone do aluno */
+	private String telefone;
+	
+	/** Variavel para armazenar o e-mail do aluno */
+	private String email;
+	
+	/** Variavel para armazenar o nome do responsável do aluno */
+	private String responsavel;
+	
+	/** Metodo para retornar o nome do aluno para a classe teste
+	 * @return nome*/
+	public String getNome() {
+		return nome;
+	}
+	/** Procedimento para trazer o nome do aluno para armazenar na variavel
+	 * @param nome*/
+	public void setNome(String nome) {
+		if(nome.length() > 0 && nome.matches("[A-Za-z ]*")) {
+			this.nome = nome;
+		}
+	}
+	/** Metodo para retornar a data de nascimento nome do aluno para a classe teste
+	 * @return dataNascimento*/
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+	/** Procedimento para trazer data de nascimento do aluno para armazenar na variavel]
+	 * @param dataNascimento*/
+	public void setDataNascimento(String dataNascimento) {
+		if(dataNascimento.length() >9 && dataNascimento.length() <11 && dataNascimento.matches("[0-9]{2}/[0-9]{2}/[0-9]{4}")) {
+			this.dataNascimento = dataNascimento;
+		}
+	}
+	/** Metodo para retornar a matricula do aluno para a classe teste
+	 * @return matricula*/
+	public String getMatricula() {
+		return matricula;
+	}
+	/** Procedimento para trazer o matricula do aluno para armazenar na variavel
+	 * @param matricula*/
+	public void setMatricula(String matricula) {
+		if (matricula.matches("[0-9 ]*")) {
+			this.matricula = matricula;
+		}
+	}
+	/** Metodo para retornar o CPF do aluno para a classe teste
+	 * @return cpf*/
+	public String getCpf() {
+		return cpf;
+	}
+	/** Procedimento para trazer o CPF do aluno para armazenar na variavel
+	 * @param cpf*/
+	public void setCpf(String cpf) {
+		if(cpf.length()>0 && cpf.length()<15 && cpf.matches("[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}")) {
+			this.cpf = cpf;
+		}
+	}
+	/** Metodo para retornar o endereço do aluno para a classe teste
+	 * @return endereco*/
+	public String getEndereco() {
+		return endereco;
+	}
+	/** Procedimento para trazer o endereço do aluno para armazenar na variavel
+	 * @param endereco*/
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	/** Metodo para retornar o telefone do aluno para a classe teste
+	 * @return telefone*/
+	public String getTelefone() {
+		return telefone;
+	}
+	/** Procedimento para trazer o telefone do aluno para armazenar na variavel
+	 * @param telefone*/
+	public void setTelefone(String telefone) {
+		if(telefone.length()>1 && telefone.length()<15 && telefone.matches("([0-9]{2}) [0-9]{5}-[0-9]{4}")) {
+			this.telefone = telefone;
+		}
+	}
+	/** Metodo para retornar o emai do aluno para a classe teste
+	 * @return email*/
+	public String getEmail() {
+		return email;
+	}
+	/** Procedimento para trazer o email do aluno para armazenar na variavel
+	 * @param email*/
+	public void setEmail(String email) {
+		if(email.matches("^[A-za-z0-9+._-]+@[A-za-z]+.[A-Za-z.]+")) {
+			this.email = email;
+		}
+		
+	}
+	/** Metodo para retornar o nome do responsável do aluno para a classe teste
+	 * @return responsavel*/
+	public String getResponsavel() {
+		return responsavel;
+	}
+	/** Procedimento para trazer o nome do responsável do aluno para armazenar na variavel
+	 * @param responsavel*/
+	public void setResponsavel(String responsavel) {
+		if (responsavel.matches("[A-Za-z ]*"))
+		this.responsavel = responsavel;
+	}
+	@Override
+	public String toString() {
+		return " Aluno\n Nome=" + nome + "\n Data de Nascimento=" + dataNascimento + "\n Matricula=" + matricula + "\n CPF="
+				+ cpf + "\n Endereço=" + endereco + "\n Telefone=" + telefone + "\n E-mail=" + email + "\n Responsável="
+				+ responsavel;
+	}
+	
+
+}

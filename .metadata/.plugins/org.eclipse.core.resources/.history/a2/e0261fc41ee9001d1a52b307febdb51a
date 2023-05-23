@@ -1,0 +1,8 @@
+package Secretaria;
+
+public class curso {
+	private String nome;
+	private int cargaHoraria;
+	private 
+
+}

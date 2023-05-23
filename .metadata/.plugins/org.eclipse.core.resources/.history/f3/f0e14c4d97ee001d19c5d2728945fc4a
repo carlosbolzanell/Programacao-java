@@ -1,0 +1,38 @@
+package Secretaria;
+
+public class Curso {
+	
+	private int cargaHoraria;
+	private String materia, nome;
+	
+	public int getCargaHoraria() {
+		return cargaHoraria;
+	}
+	public void setCargaHoraria(int cargaHoraria) {
+		if(cargaHoraria > 0) {
+			this.cargaHoraria = cargaHoraria;
+		}
+	}
+	public String getMateria() {
+		return materia;
+	}
+	public void setMateria(String materia) {
+		if(materia.matches("[A-Za-z çÇãõâêôéáíó]*")) {
+			this.materia = materia;
+		}
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		if(nome.matches("[A-Za-z]*")) {
+			this.nome = nome;
+		}
+	}
+	@Override
+	public String toString() {
+		return "Curso cargaHoraria=" + cargaHoraria + ", materia=" + materia + ", nome=" + nome;
+	}
+	
+
+}
