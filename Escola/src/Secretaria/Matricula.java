@@ -8,52 +8,51 @@ package Secretaria;
 public class Matricula {
 	
 	/** Variaveis para armazenar as propriedades da matrícula do aluno */
-	private int numero;
-	private String curso, turma;
+	private String codigo;
+	private Aluno aluno;
+	private UnidadeCurricular uc;
+	
+	/** Construtor para ativar as váriaveis aluno e unidade curricular*/
+	public Matricula(Aluno aluno, UnidadeCurricular uc) {
+		super();
+		this.setAluno(aluno);
+		this.setUnidadeCurricular(uc);
+	}
 	
 	/** Metodo para retornar o número da matrícula para a classe teste
-	 * @return numero*/
-	public int getNumero() {
-		return numero;
+	 * @return codigo*/
+	public String getCodigo() {
+		return codigo;
 	}
 	/** Procedimento para trazer o número da matrícula para armazenar na variavel
-	 * @param numero*/
-	public void setNumero(int numero) {
-		if(numero > 0) {
-			this.numero = numero;
-		}else {
+	 * @param codigo*/
+	public void setCodigo(String codigo) {
+		if(codigo.matches("[A-Z]{1}[0-9]{5}")) {
+			this.codigo = codigo;
 		}
 	}
-	
-	/** Metodo para retornar o curso da matrícula para a classe teste
+	/** Metodo para retornar o nome do aluno para a classe teste
+	 * @return aluno*/
+	public Aluno getAluno() {
+		return aluno;
+	}
+	/** Procedimento para trazer o nome do aluno para armazenar na variavel
+	 * @param aluno*/
+	public void setAluno(Aluno aluno) {
+		if(aluno != null) {
+			this.aluno = aluno;
+		}
+	}
+	/** Metodo para retornar a unidade curricular para a classe teste
 	 * @return curso*/
-	public String getCurso() {
-		return curso;
+	public UnidadeCurricular getUnidadeCurricular() {
+		return uc;
 	}
-	/** Procedimento para trazer o curso da matrícula para armazenar na variavel
-	 * @param numero*/
-	public void setCurso(String curso) {
-		if(curso.matches("[A-Za-z ]*")) {
-			this.curso = curso;
-		}else {
-		}
-		
+	/** Procedimento para trazer a unidade curricular para armazenar na variavel
+	 * @param curso*/
+	public void setUnidadeCurricular(UnidadeCurricular uc) {
+		this.uc = uc;
 	}
-	/** Metodo para retornar a turma da matrícula para a classe teste
-	 * @return turma*/
-	public String getTurma() {
-		return turma;
-	}
-	/** Procedimento para trazer a turma da matrícula para armazenar na variavel
-	 * @param numero*/
-	public void setTurma(String turma) {
-		this.turma = turma;
-	}
-	
-	@Override
-	public String toString() {
-		return " Matricula\n Numero=" + numero + "\n Curso=" + curso + "\n Turma=" + turma;
-	}
-	
+
 
 }

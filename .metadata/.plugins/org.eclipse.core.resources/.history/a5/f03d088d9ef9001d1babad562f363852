@@ -1,0 +1,29 @@
+package Secretaria;
+
+public class Avaliacao {
+	private String nome;
+	private UnidadeCurricular uc;
+	
+	public Avaliacao(String nome, UnidadeCurricular uc) {
+		super();
+		this.nome = nome;
+		this.uc = uc;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public UnidadeCurricular getUc() {
+		return uc;
+	}
+
+	public void setUc(UnidadeCurricular uc) {
+		this.uc = uc;
+	}
+	
+}

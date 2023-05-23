@@ -8,17 +8,16 @@ package Secretaria;
 
 public class Aluno {
 	
-	/** Variavél para armazenar o nome do aluno */
+	/** Variaveis para armazenar o nome do aluno */
 	private String nome;
 	private String dataNascimento;
-	private String matricula;
 	private String cpf;
 	private String endereco;
 	private String telefone;
 	private String email;
 	private String responsavel;
 	
-	
+	/** Construtor  para ativar a variavel nome */
 	public Aluno(String nome) {
 		setNome(nome);
 	}
@@ -29,13 +28,12 @@ public class Aluno {
 	}
 	/** Procedimento para trazer o nome do aluno para armazenar na variavel
 	 * @param nome*/
-	public boolean setNome(String nome) {
+	public void setNome(String nome) {
 		if(nome.length() > 0 && nome.matches("[A-Za-z ]*")) {
 			this.nome = nome;
-			return true;
-		}else {
-			return false;
 		}
+		
+	
 	}
 	/** Metodo para retornar a data de nascimento nome do aluno para a classe teste
 	 * @return dataNascimento*/
@@ -46,29 +44,12 @@ public class Aluno {
 	}
 	/** Procedimento para trazer data de nascimento do aluno para armazenar na variavel]
 	 * @param dataNascimento*/
-	public boolean setDataNascimento(String dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		if(dataNascimento.length() >9 && dataNascimento.length() <11 && dataNascimento.matches("[0-9]{2}/[0-9]{2}/[0-9]{4}")) {
 			this.dataNascimento = dataNascimento;
-			return true;
-		}else {
-			return false;
 		}
 	}
-	/** Metodo para retornar a matricula do aluno para a classe teste
-	 * @return matricula*/
-	public String getMatricula() {
-		return matricula;
-	}
-	/** Procedimento para trazer o matricula do aluno para armazenar na variavel
-	 * @param matricula*/
-	public boolean setMatricula(String matricula) {
-		if (matricula.matches("[0-9 ]*")) {
-			this.matricula = matricula;
-			return true;
-		}else {
-			return false;
-		}
-	}
+	
 	/** Metodo para retornar o CPF do aluno para a classe teste
 	 * @return cpf*/
 	public String getCpf() {
@@ -76,12 +57,9 @@ public class Aluno {
 	}
 	/** Procedimento para trazer o CPF do aluno para armazenar na variavel
 	 * @param cpf*/
-	public boolean setCpf(String cpf) {
-		if(cpf.length()>0 && cpf.length()<15 && cpf.matches("[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}")) {
+	public void setCpf(String cpf) {
+		if(cpf.matches("[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}")) {
 			this.cpf = cpf;
-			return true;
-		}else {
-			return false;
 		}
 	}
 	/** Metodo para retornar o endereço do aluno para a classe teste
@@ -91,12 +69,9 @@ public class Aluno {
 	}
 	/** Procedimento para trazer o endereço do aluno para armazenar na variavel
 	 * @param endereco*/
-	public boolean setEndereco(String endereco) {
+	public void setEndereco(String endereco) {
 		if(endereco.length()>1) {
 			this.endereco = endereco;
-			return true;
-		}else {
-			return false;
 		}
 		
 	}
@@ -107,12 +82,9 @@ public class Aluno {
 	}
 	/** Procedimento para trazer o telefone do aluno para armazenar na variavel
 	 * @param telefone*/
-	public boolean setTelefone(String telefone) {
-		if(telefone.length()>1 && telefone.length()<15 && telefone.matches("[0-9]{2} [0-9]{5}-[0-9]{4}")) {
+	public void setTelefone(String telefone) {
+		if(telefone.matches("[0-9]{2} [0-9]{5}-[0-9]{4}")) {
 			this.telefone = telefone;
-			return true;
-		}else {
-			return false;
 		}
 	}
 	/** Metodo para retornar o emai do aluno para a classe teste
@@ -122,12 +94,9 @@ public class Aluno {
 	}
 	/** Procedimento para trazer o email do aluno para armazenar na variavel
 	 * @param email*/
-	public boolean setEmail(String email) {
+	public void setEmail(String email) {
 		if(email.matches("^[A-za-z0-9+._-]+@[A-za-z]+.[A-Za-z.]+")) {
 			this.email = email;
-			return true;
-		}else {
-			return false;
 		}
 		
 	}
@@ -138,12 +107,9 @@ public class Aluno {
 	}
 	/** Procedimento para trazer o nome do responsável do aluno para armazenar na variavel
 	 * @param responsavel*/
-	public boolean setResponsavel(String responsavel) {
+	public void setResponsavel(String responsavel) {
 		if (responsavel.matches("[A-Za-z ]*") && responsavel.length()>1) {
 			this.responsavel = responsavel;
-			return true;
-		}else {
-			return false;
 		}
 		
 	}

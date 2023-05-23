@@ -1,0 +1,35 @@
+package Secretaria;
+
+/** Classe para a representacao da matrícula do aluno no sistema escolar
+ * 
+ * @author Carlos Eduardo Bolzanell
+ */
+
+public class Matricula {
+	
+	/** Variaveis para armazenar as propriedades da matrícula do aluno */
+	private String codigo;
+	private Aluno aluno;
+	private Curso curso;
+	
+	public Matricula(Aluno aluno, Curso curso) {
+		super();
+		this.aluno = aluno;
+		this.curso = curso;
+	}
+	
+	/** Metodo para retornar o número da matrícula para a classe teste
+	 * @return numero*/
+	public String getCodigo() {
+		return codigo;
+	}
+	/** Procedimento para trazer o número da matrícula para armazenar na variavel
+	 * @param numero*/
+	public void setCodigo(String codigo) {
+		if(codigo.matches("[A-Z]{1}[0-9]{5}")) {
+			this.codigo = codigo;
+		}
+	}
+
+
+}

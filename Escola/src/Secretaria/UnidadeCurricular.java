@@ -1,28 +1,47 @@
 package Secretaria;
 
+/** Classe para a representacao da unidade curricular no sistema escolar
+ * 
+ * @author Carlos Eduardo Bolzanell
+ */
+
 public class UnidadeCurricular {
 	
-	private String avaliacao;
-	private int frequencia;
-	private String professor;
+	/** Variaveis para armazenar as propriedades da unidade curricular */
+	private String nome;
+	private Curso curso;
+
+	/** Construtor para ativar as váriaveis nome e curso*/
+	public UnidadeCurricular(String nome, Curso curso) {
+		super();
+		this.nome = nome;
+		this.curso = curso;
+	}
+
+	/** Metodo para retornar o nome da unidade curricular para a classe teste
+	 * @return nome*/
+	public String getNome() {
+		return nome;
+	}
+
+	/** Procedimento para trazer o nome da unidade curricular para armazenar na variavel
+	 * @param nome*/
+	public void setNome(String nome) {
+		if(nome.matches("[A-Za-z áàâãéèêóòôõíìç]*")) {
+			this.nome = nome;
+		}
+	}
 	
-	public String getAvaliacao() {
-		return avaliacao;
+	/** Metodo para retornar o nome do curso da unidade curricular para a classe teste
+	 * @return curso*/
+	public Curso getCurso() {
+		return curso;
 	}
-	public void setAvaliacao(String avaliacao) {
-		this.avaliacao = avaliacao;
-	}
-	public int getFrequencia() {
-		return frequencia;
-	}
-	public void setFrequencia(int frequencia) {
-		this.frequencia = frequencia;
-	}
-	public String getProfessor() {
-		return professor;
-	}
-	public void setProfessor(String professor) {
-		this.professor = professor;
+
+	/** Procedimento para trazer o nome do curso da unidade curricular para armazenar na variavel
+	 * @param curso*/
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
 	
 
